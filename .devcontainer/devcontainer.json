@@ -1,0 +1,5 @@
+{
+  "image": "parasoft/cpptest:latest",
+  "features": {
+  }
+}
