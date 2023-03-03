@@ -1,5 +1,8 @@
 {
   "image": "parasoft/cpptest:latest",
   "features": {
-  }
+  },
+  "extensions": [
+		"parasoft.vscode-cpptest"
+	]
 }
