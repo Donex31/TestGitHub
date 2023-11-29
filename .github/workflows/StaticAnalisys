@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: dotTEST Simple Workflow
+name: dotTEST Simple Workflow SA
 
 # Controls when the action will run. 
 on:
