@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Run Parasoft dotTEST
         id: dottest
         # You may pin to the exact commit or the version.
@@ -52,6 +52,6 @@ jobs:
       # ---------------------------------------------------------------
       # Upload the findings into the GitHub code scanning alert section
       - name: Upload results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.dottest.outputs.report }}
