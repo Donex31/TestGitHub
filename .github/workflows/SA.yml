@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - name: Run Parasoft dotTEST
         id: dottest
         # You may pin to the exact commit or the version.
@@ -32,11 +32,9 @@ jobs:
         with:
           installDir: 'c:\Program Files\Parasoft\dotTEST\2025.3'
           # Path to solution(s) to be analyzed. Specify multiple times to analyze many solutions. Supports ANT-style wildcards.
-          solution: 'C:\Users\dkedzior\Desktop\TestGitHub\BankExample\BankExampleWithTests.sln'
+          solution: 'BankExample\BankExample.sln'
           showsettings: true
           property: license.network.host=licserv.parasoft.com.pl; console.verbosity.level=high
-          # An URL of test configuration to be used for analysis
-          testConfig: builtin://Recommended Rules
           # Fails the command with exit code 2 if any findings are reported.
           fail: false
           sarifMode: 'builtin'
